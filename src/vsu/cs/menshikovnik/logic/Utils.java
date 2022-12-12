@@ -6,8 +6,6 @@ import java.util.Arrays;
 import java.util.List;
 
 
-
-
 public class Utils {
 
     public static int[][] readIntMatrixFromFile(String fileName) throws IOException {
@@ -24,21 +22,19 @@ public class Utils {
         }
         return a;
     }
+
     //вывод
-    public static void writeIntMatrixToFile(String fileName, int[][] matrix) throws IOException{
+    public static void writeIntMatrixToFile(String fileName, int[][] matrix) throws IOException {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             for (int[] row : matrix) {
-                String[] strRow =  Arrays.stream(row)
+                String[] strRow = Arrays.stream(row)
                         .mapToObj(String::valueOf)
                         .toArray(String[]::new);
                 writer.write(String.join(" ", strRow));
                 writer.write('\n');
             }
         }
-
-
-        //out.println(Arrays.toString(matrixForOutput).replaceAll("^\\[|]$", ""));
 
     }
 

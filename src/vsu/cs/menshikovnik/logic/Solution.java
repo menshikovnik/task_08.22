@@ -1,7 +1,7 @@
 package vsu.cs.menshikovnik.logic;
 
 public class Solution {
-    public static int [][] calc (int [][] myArray){
+    public static int[][] calc(int[][] myArray) {
         int r = myArray.length;
         int c = myArray[0].length;
         int[][] newArray = new int[r][c];
@@ -14,15 +14,10 @@ public class Solution {
                 }
             }
         }
-//        for (int i = 0; i < newArray.length; i++) {
-//            for (int j = 0; j < newArray[i].length; j++) { // вывод нового массива
-//                System.out.print(newArray[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
         return newArray;
     }
-    public static int getCountFriendly ( int[][] myArray, int[][] array, int r, int c, int y, int x, int value){
+
+    public static int getCountFriendly(int[][] myArray, int[][] array, int r, int c, int y, int x, int value) {
         if (y < 0 || x < 0 || x == c || y == r || array[y][x] > 0 || myArray[y][x] != value) return 0;
         array[y][x] = 1;
         int result = 1;
@@ -32,8 +27,9 @@ public class Solution {
         result += getCountFriendly(myArray, array, r, c, y, x + 1, value);
         return result;
     }
-    public static int arrayFilling ( int[][] myArray, int[][] array, int[][] newArray, int r, int c, int y, int x,
-                                     int value, int fillArray){
+
+    public static int arrayFilling(int[][] myArray, int[][] array, int[][] newArray, int r, int c, int y, int x,
+                                   int value, int fillArray) {
         if (y < 0 || x < 0 || x == c || y == r || array[y][x] == 2 || myArray[y][x] != value) return 0;
         array[y][x] = 2;
         newArray[y][x] = fillArray;
