@@ -66,11 +66,9 @@ public class FrameMain extends JFrame {
         SwingUtils.initLookAndFeelMenu(menuLookAndFeel);
 
         JTableUtils.writeArrayToJTable(tableInput, new int[][]{
-                {6, 15, 3, 4, 5, 6, 7, 8, 37},
-                {6, 2, 16, 2, 9, 30, 8, 11, 5},
-                {62, 6, 32, 7, 8, 4, 2, 5, 5},
-                {9, 8, 7, 51, 9, 7, 4, 9, 7},
-                {5, 3, 6, 12, 2, 7, 3, 2, 8}
+                {1, 2, 3, 9, 9},
+                {2, 2, 2, 9, 2},
+                {1, 1, 2, 2, 4},
         });
 
         this.pack();
