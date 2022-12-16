@@ -46,8 +46,8 @@ import javax.swing.table.TableModel;
 
 
 /**
- * Набор функций для работы с JTable (ввода и отбражения массивов)
- * @author Дмитрий Соломатин (кафедра ПиИТ ФКН ВГУ)
+ * Набор функций для работы с JTable (ввода и отображения массивов)
+ * @author Димасик Соломатин (кафедра ПиИТ ФКН ВГУ)
  *
  * @see <a href="http://java-online.ru/swing-jtable.xhtml">http://java-online.ru/swing-jtable.xhtml</a>
  */
@@ -172,6 +172,7 @@ public class JTableUtils {
         scrollPane.setRowHeaderView(rowHeader);
         scrollPane.getRowHeader().getView().setBackground(scrollPane.getColumnHeader().getBackground());
     }
+
 
     /**
      * Настройка JTable для работы с массивами

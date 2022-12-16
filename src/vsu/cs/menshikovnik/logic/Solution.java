@@ -28,15 +28,14 @@ public class Solution {
         return result;
     }
 
-    public static int arrayFilling(int[][] myArray, int[][] array, int[][] newArray, int r, int c, int y, int x,
+    public static void arrayFilling(int[][] myArray, int[][] array, int[][] newArray, int r, int c, int y, int x,
                                    int value, int fillArray) {
-        if (y < 0 || x < 0 || x == c || y == r || array[y][x] == 2 || myArray[y][x] != value) return 0;
+        if (y < 0 || x < 0 || x == c || y == r || array[y][x] == 2 || myArray[y][x] != value) return;
         array[y][x] = 2;
         newArray[y][x] = fillArray;
         arrayFilling(myArray, array, newArray, r, c, y - 1, x, value, fillArray);
         arrayFilling(myArray, array, newArray, r, c, y, x - 1, value, fillArray);
         arrayFilling(myArray, array, newArray, r, c, y + 1, x, value, fillArray); // flood fill для заполнения нового массива
         arrayFilling(myArray, array, newArray, r, c, y, x + 1, value, fillArray);
-        return arrayFilling(myArray, array, newArray, r, c, y, x, value, fillArray);
     }
 }
